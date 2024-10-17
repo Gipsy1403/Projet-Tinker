@@ -1,0 +1,25 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixins" as m;
+
+
+@media screen and (max-width:700px) {
+      .fa-bars{
+            display: block;
+            margin-right: 2rem;
+      }
+      ul{
+            display: none;
+      }
+      .menu_bar:hover ul{
+            display: block;
+            position: relative;
+            top: 1.5rem;
+            right: 0;
+            background-color: orange ;
+            color: white;
+      }
+      ul li{
+            padding: 1rem;
+      }
+
+}

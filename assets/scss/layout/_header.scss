@@ -1,0 +1,59 @@
+@use "../abstract/variable" as v;
+@use "../abstract/mixins" as m;
+
+header{
+     background-image: url(../image/banner_bg.jpg); 
+     background-position: center;
+     background-size: cover;
+     color: white;
+
+}
+nav{
+      height: 3rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+
+      position: relative;
+}
+nav h2{
+      text-transform: uppercase;
+      font-size: 1.5em;
+      
+}
+nav h2::first-letter{
+      font-size:  2em;
+      color:v.$first-color; 
+      
+}
+.fa-bars{
+      display: none;
+      font-size: 2em;
+}
+nav ul{
+      display: flex;
+}
+nav ul li{
+      margin: 0 1rem;
+      text-transform: uppercase;
+}
+nav li a{
+      margin: 0 1rem;
+      color: white;
+}
+.banner_title{
+      text-align: center;
+      margin: 10rem 5rem;
+}
+.banner_title h1{
+      .bleu {
+            color: v.$snd-color;
+      }
+      .orange{
+            color: v.$first-color;
+      }
+}
+.banner_title a{
+      @include btnblue:
+}
