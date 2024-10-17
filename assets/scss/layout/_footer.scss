@@ -1,2 +1,78 @@
 @use "../abstract/variable" as v;
 @use "../abstract/mixins" as m;
+
+footer{
+      background-color: v.$four-color;
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 5rem 0;
+      h4{
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+      }
+}
+.tinker{
+      h2{
+            text-transform: uppercase;
+            font-size: 1.5em;
+            
+      }
+      h2::first-letter{
+            font-size:  2em;
+            color:v.$first-color; 
+      }
+      span{
+            color: v.$first-color;
+            font-weight: bold;
+      }
+}
+.location{
+      .address{
+            display: flex;
+            flex-direction: row;
+            border-left: 2px solid white;
+      }
+}
+.nav_foot{
+      display: flex;
+      justify-content: space-between;
+      a{
+            color: v.$four-color;
+      }
+}
+.cercle{
+      background-color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      position: relative;
+      .fa-facebook-f{
+            position: absolute;
+            top: 25%;
+            left: 35%;
+      }
+      .fa-twitter{
+            position: absolute;
+            top: 25%;
+            left: 25%;
+      }
+      .fa-linkedin-in{
+            position: absolute;
+            top: 25%;
+            left: 23%;
+      }
+      .fa-wifi{
+            position: absolute;
+            top: 25%;
+            left: 15%;
+            transform: rotate(45deg);
+      }
+      .fa-baseball{
+            position: absolute;
+            top: 25%;
+            left: 22%;
+
+      }
+
+}

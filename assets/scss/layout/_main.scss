@@ -1,2 +1,242 @@
 @use "../abstract/variable" as v;
 @use "../abstract/mixins" as m;
+
+#firstsection{
+      background-image: url(../image/about-bg.jpg);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 80vh;
+
+}
+.cards{
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: 80%;
+}
+.card_content{
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      margin: 3rem 0;
+            p{
+            text-align: center;
+            margin: 1rem 0;
+            }
+            .btnblue{
+                  font-size: small;
+            @include m.btnblue
+            }
+}
+.icon{
+      background-color: v.$first-color;
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid white;
+      border-radius: 50%;
+      position: relative;
+      margin: 2rem 0;
+      .one{
+            position: absolute;
+            bottom: 22%;
+            left: 23%;
+      }
+      .two{
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+      }
+      .three{
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+      }
+      .four{
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+      }
+}
+
+// **************OUR GALLERY************************
+#gallery{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+// partie de gauche - liens
+.cardblue{
+      width: 40%;
+      height: 100%;
+      background-color: v.$snd-color;
+      color: #faffff;
+      padding-left: 5rem;
+      padding-right: 3rem;
+      h2{
+            text-transform: uppercase;
+            padding-top: 6rem;
+      }
+      .ligne{
+            border-bottom: 2px solid #95e7ed ;
+            margin: 1rem 0;
+      }
+      p{
+            margin: 1rem 0;
+      }
+      a{
+            color: #faffff;
+            line-height: 2rem;
+            font-weight: bold; 
+      }
+      a:hover{
+            color: v.$first-color;
+      }
+      ul{
+            margin-bottom: 3rem;
+      }
+}
+// partie de droite - photos
+.photos{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 50% ;
+img{
+      width: 40%;
+}
+}
+// ****************CITATION***********************
+#citation{
+      text-align: center;
+      background-color: v.$first-color;
+      padding: 5rem 0;
+}
+.text{
+      background-color: white;
+      font-style: italic;
+      margin: 2rem 10rem;
+      padding: 2rem;
+}
+.name{
+      color: white;
+      font-weight: bolder;
+      font-size: 2em;
+      span{
+            display: block;
+            font-weight: normal;
+            font-size: large;
+            margin-bottom: 2rem;
+      }
+}
+.radio{
+      display: flex;
+      justify-content: center;
+      .rond{
+            width: 15px;
+            height: 15px;
+            box-shadow: 1px 1px 5px #967f39;
+            border-radius: 50%;
+            }
+      .vide{
+            background-color:#f9e7ad ;
+      }
+      .plein{
+            background-color:#faffff
+      }
+      div{
+            margin: 0 0.5rem;
+      }
+}
+// ******************BLOG***********************************
+#blog{
+      display: flex;
+
+}
+.post{
+      background-color: black;
+      color: white;
+      width: 33%;
+      padding-left: 5rem;
+      padding-right: 3rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      h2{
+            text-transform: uppercase;
+      }
+      .ligne{
+            border-bottom: 2px solid gray ;
+            margin: 1rem 0;
+      }
+      .buttoms a{
+            color: black;
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            @include m.btnwhiteblog
+      }
+}
+.bkg_right{
+      display: flex;
+      align-items: flex-end;
+      background-image: url(../image/blog-bg.jpg);
+      background-position: right;
+      background-size: cover;
+      width: 50%;
+      position: relative;
+      .bkg2{
+            background-image: url(../image/blog_item_01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
+            // height:10vh;
+            width: 80%;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+      }
+}
+.content_{
+      position: absolute;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      padding : 1rem;
+      .marketing{
+            color: #95e7ed;
+            font-weight: bolder;
+            margin-bottom: 0.5rem;
+      }
+      p{
+            font-size: 0.8em;
+      }
+ 
+}
+// ***********************CONTACT*******************
+#contact{
+      text-align: center;
+      background-color: v.$third-color;
+      color: white;
+      padding-top: 5rem;
+      h2{
+            text-transform: uppercase;
+      }
+      .ligne{
+            border-bottom: 2px solid gray ;
+            margin: 1rem 33rem;
+      }
+      p{
+            padding: 0 20rem;
+            margin-bottom: 2rem;
+      }
+      .btnblue{
+            @include m.btnblue
+      }
+      .map{
+            background-image: url(../image/map.png);
+            background-position: center;
+            background-size: cover;
+            height: 80vh;
+            margin-top: 6rem;
+      }
+}

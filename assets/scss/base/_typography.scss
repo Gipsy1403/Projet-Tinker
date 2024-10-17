@@ -9,7 +9,18 @@
       font-family: "robotobold" ;
       src: url(../../font/Roboto-Bold.ttf);
 }
+@font-face {
+      font-family: "poppins" ;
+      src: url(../../font/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+      font-family: "banner";
+      src: url(../../font/Poppins/Poppins-Regular.ttf);
+}
 
-body{
+header{
+      font-family: "banner";
+}
+main{
       font-family:"roboto";
 }

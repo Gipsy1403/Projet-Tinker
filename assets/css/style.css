@@ -1,18 +1,478 @@
-/* Error: expected ";".
- *    ,
- * 58 |       @include btnblue:
- *    |                       ^
- *    '
- *   assets\scss\layout\_header.scss 58:23  @use
- *   assets\scss\style.scss 3:1             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 58 \2502        @include btnblue:\d\a    \2502                        ^\a    \2575 \a   assets\\scss\\layout\\_header.scss 58:23  @use\a   assets\\scss\\style.scss 3:1             root stylesheet';
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
 }
+
+@font-face {
+  font-family: "roboto";
+  src: url(../../font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "robotobold";
+  src: url(../../font/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(../../font/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "banner";
+  src: url(../../font/Poppins/Poppins-Regular.ttf);
+}
+header {
+  font-family: "banner";
+}
+
+main {
+  font-family: "roboto";
+}
+
+header {
+  background-image: url(../image/banner_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+nav h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+nav h2::first-letter {
+  font-size: 2em;
+  color: #f5c45d;
+}
+
+.fa-bars {
+  display: none;
+  font-size: 2em;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+nav li a {
+  margin: 0 1rem;
+  color: white;
+}
+
+.banner_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  margin: 0 10rem;
+}
+
+.banner_title h1 {
+  margin-bottom: 1rem;
+}
+.banner_title h1 .bleu {
+  color: #3dc1cd;
+}
+.banner_title h1 .orange {
+  color: #f5c45d;
+}
+
+.banner_title p {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.btnwhite {
+  background-color: white;
+  color: black;
+  font-size: "poppins";
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: all 0.1s linear;
+}
+.btnwhite:hover {
+  color: #f5c45d;
+}
+
+#firstsection {
+  background-image: url(../image/about-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 80vh;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+.card_content p {
+  text-align: center;
+  margin: 1rem 0;
+}
+.card_content .btnblue {
+  font-size: small;
+  background-color: #3dc1cd;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px grey;
+  padding: 10px;
+}
+.card_content .btnblue:hover {
+  background-color: white;
+  color: #3dc1cd;
+}
+
+.icon {
+  background-color: #f5c45d;
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  margin: 2rem 0;
+}
+.icon .one {
+  position: absolute;
+  bottom: 22%;
+  left: 23%;
+}
+.icon .two {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+.icon .three {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+.icon .four {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+
+#gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardblue {
+  width: 40%;
+  height: 100%;
+  background-color: #3dc1cd;
+  color: #faffff;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+.cardblue h2 {
+  text-transform: uppercase;
+  padding-top: 6rem;
+}
+.cardblue .ligne {
+  border-bottom: 2px solid #95e7ed;
+  margin: 1rem 0;
+}
+.cardblue p {
+  margin: 1rem 0;
+}
+.cardblue a {
+  color: #faffff;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.cardblue a:hover {
+  color: #f5c45d;
+}
+.cardblue ul {
+  margin-bottom: 3rem;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+.photos img {
+  width: 40%;
+}
+
+#citation {
+  text-align: center;
+  background-color: #f5c45d;
+  padding: 5rem 0;
+}
+
+.text {
+  background-color: white;
+  font-style: italic;
+  margin: 2rem 10rem;
+  padding: 2rem;
+}
+
+.name {
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+}
+.name span {
+  display: block;
+  font-weight: normal;
+  font-size: large;
+  margin-bottom: 2rem;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+}
+.radio .rond {
+  width: 15px;
+  height: 15px;
+  box-shadow: 1px 1px 5px #967f39;
+  border-radius: 50%;
+}
+.radio .vide {
+  background-color: #f9e7ad;
+}
+.radio .plein {
+  background-color: #faffff;
+}
+.radio div {
+  margin: 0 0.5rem;
+}
+
+#blog {
+  display: flex;
+}
+
+.post {
+  background-color: black;
+  color: white;
+  width: 33%;
+  padding-left: 5rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.post h2 {
+  text-transform: uppercase;
+}
+.post .ligne {
+  border-bottom: 2px solid gray;
+  margin: 1rem 0;
+}
+.post .buttoms a {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  background-color: white;
+  color: black;
+  font-size: "poppins";
+  font-weight: bolder;
+  padding: 10px;
+  transition: all 0.1s linear;
+}
+.post .buttoms a:hover {
+  color: #f5c45d;
+}
+
+.bkg_right {
+  display: flex;
+  align-items: flex-end;
+  background-image: url(../image/blog-bg.jpg);
+  background-position: right;
+  background-size: cover;
+  width: 50%;
+  position: relative;
+}
+.bkg_right .bkg2 {
+  background-image: url(../image/blog_item_01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.content_ {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.content_ .marketing {
+  color: #95e7ed;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+.content_ p {
+  font-size: 0.8em;
+}
+
+#contact {
+  text-align: center;
+  background-color: #585f65;
+  color: white;
+  padding-top: 5rem;
+}
+#contact h2 {
+  text-transform: uppercase;
+}
+#contact .ligne {
+  border-bottom: 2px solid gray;
+  margin: 1rem 33rem;
+}
+#contact p {
+  padding: 0 20rem;
+  margin-bottom: 2rem;
+}
+#contact .btnblue {
+  background-color: #3dc1cd;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px grey;
+  padding: 10px;
+}
+#contact .btnblue:hover {
+  background-color: white;
+  color: #3dc1cd;
+}
+#contact .map {
+  background-image: url(../image/map.png);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  margin-top: 6rem;
+}
+
+footer {
+  background-color: #373b3c;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5rem 0;
+}
+footer h4 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.tinker h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.tinker h2::first-letter {
+  font-size: 2em;
+  color: #f5c45d;
+}
+.tinker span {
+  color: #f5c45d;
+  font-weight: bold;
+}
+
+.location .address {
+  display: flex;
+  flex-direction: row;
+  border-left: 2px solid white;
+}
+
+.nav_foot {
+  display: flex;
+  justify-content: space-between;
+}
+.nav_foot a {
+  color: #373b3c;
+}
+
+.cercle {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+}
+.cercle .fa-facebook-f {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+.cercle .fa-twitter {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.cercle .fa-linkedin-in {
+  position: absolute;
+  top: 25%;
+  left: 23%;
+}
+.cercle .fa-wifi {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+.cercle .fa-baseball {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+}
+
+@media screen and (max-width: 700px) {
+  .fa-bars {
+    display: block;
+    margin-right: 2rem;
+  }
+  ul {
+    display: none;
+  }
+  .menu_bar:hover ul {
+    display: block;
+    position: relative;
+    top: 1.5rem;
+    right: 0;
+    background-color: orange;
+    color: white;
+  }
+  ul li {
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
