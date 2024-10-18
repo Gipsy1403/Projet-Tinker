@@ -63,15 +63,11 @@
 // **************OUR GALLERY************************
 #gallery{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100vh;
-      
+      justify-content: center;
+      width: 100%;
 }
-// partie de gauche - liens
 .cardblue{
-      width: 30%;
-      height: 100%;
+      width: 33%;
       background-color: v.$snd-color;
       color: #faffff;
       padding-left: 5rem;
@@ -99,39 +95,11 @@
             margin-bottom: 3rem;
       }
 }
-// partie de droite - photos
 .photos{
-      display: grid;
-      width: 54%;
-      height: 100%;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas:
-      " pict1  pict2"
-      " pict3  pict4"
-      " pict5  pict6";
+      width:30%;
       img{
+            height: 100%;
             width: 100%;
-            object-fit: cover;
-            flex-wrap: wrap;
-      }
-      .pict1{
-            grid-area: pict1;
-           }
-      .pict2{
-            grid-area: pict2;
-      }
-      .pict3{
-            grid-area: pict3;
-           }
-      .pict4{
-            grid-area: pict4;
-      }
-      .pict5{
-            grid-area: pict5;
-           }
-      .pict6{
-            grid-area: pict6;
       }
 }
 

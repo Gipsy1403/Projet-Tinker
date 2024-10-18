@@ -181,14 +181,12 @@ nav h2::first-letter {
 
 #gallery {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
 
 .cardblue {
-  width: 30%;
-  height: 100%;
+  width: 33%;
   background-color: #3dc1cd;
   color: #faffff;
   padding-left: 5rem;
@@ -218,35 +216,11 @@ nav h2::first-letter {
 }
 
 .photos {
-  display: grid;
-  width: 54%;
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: " pict1  pict2" " pict3  pict4" " pict5  pict6";
+  width: 30%;
 }
 .photos img {
+  height: 100%;
   width: 100%;
-  object-fit: cover;
-  flex-wrap: wrap;
-}
-.photos .pict1 {
-  grid-area: pict1;
-}
-.photos .pict2 {
-  grid-area: pict2;
-}
-.photos .pict3 {
-  grid-area: pict3;
-}
-.photos .pict4 {
-  grid-area: pict4;
-}
-.photos .pict5 {
-  grid-area: pict5;
-}
-.photos .pict6 {
-  grid-area: pict6;
 }
 
 #citation {
@@ -517,6 +491,11 @@ footer h4 {
   }
   .address div {
     margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .photos img {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 960px) {
