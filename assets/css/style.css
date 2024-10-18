@@ -7,25 +7,25 @@
 
 @font-face {
   font-family: "roboto";
-  src: url(../../font/Roboto-Regular.ttf);
+  src: url(../font/Roboto-Regular.ttf);
 }
 @font-face {
   font-family: "robotobold";
-  src: url(../../font/Roboto-Bold.ttf);
+  src: url(../font/Roboto-Bold.ttf);
 }
 @font-face {
   font-family: "poppins";
-  src: url(../../font/Poppins/Poppins-Black.ttf);
+  src: url(../font/Poppins/Poppins-Black.ttf);
 }
 @font-face {
   font-family: "banner";
-  src: url(../../font/Poppins/Poppins-Regular.ttf);
+  src: url(../font/Poppins/Poppins-Regular.ttf);
 }
 header {
   font-family: "banner";
 }
 
-main footer {
+main, footer {
   font-family: "roboto";
 }
 
@@ -59,16 +59,16 @@ nav h2::first-letter {
   font-size: 2em;
 }
 
-nav ul {
+.menu_bar ul {
   display: flex;
 }
 
-nav ul li {
+.menu_bar ul li {
   margin: 0 1rem;
   text-transform: uppercase;
 }
 
-nav li a {
+.menu_bar li a {
   margin: 0 1rem;
   color: white;
 }
@@ -130,7 +130,6 @@ nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0;
 }
 .card_content p {
   text-align: center;
@@ -184,6 +183,7 @@ nav li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100vh;
 }
 
 .cardblue {
@@ -219,8 +219,8 @@ nav li a {
 
 .photos {
   display: grid;
-  width: 60%;
-  height: 30%;
+  width: 54%;
+  height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: " pict1  pict2" " pict3  pict4" " pict5  pict6";
@@ -334,21 +334,21 @@ nav li a {
   display: flex;
   align-items: flex-end;
   background-image: url(../image/blog-bg.jpg);
-  background-position: right;
+  background-position: center;
   background-size: cover;
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 .bkg_right .bkg2 {
   background-image: url(../image/blog_item_01.jpg);
-  background-position: center;
+  background-position: left;
   background-size: cover;
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: 90%;
   width: 80%;
   position: absolute;
   top: 5%;
   left: 5%;
+  border: 2px solid black;
 }
 
 .content_ {
@@ -357,6 +357,7 @@ nav li a {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  top: 70%;
 }
 .content_ .marketing {
   color: #95e7ed;
@@ -440,7 +441,7 @@ footer h4 {
   padding-left: 1rem;
 }
 .location .address div:nth-child(2) {
-  border-left: 2px solid rgb(78, 77, 77);
+  border-left: 2px solid gray;
 }
 
 .info span {
@@ -489,24 +490,154 @@ footer h4 {
   left: 22%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1250px) {
+  .banner_title {
+    text-align: center;
+  }
+  .cards {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .card_content {
+    padding: 0 1rem;
+  }
+  .card_content h3 {
+    text-align: center;
+  }
+  .post .buttoms a {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  #contact p {
+    padding: 0 10rem;
+  }
+  .address {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .address div {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .menu_bar li a {
+    margin: 0 0.2rem;
+  }
+  .cards {
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  #firstsection {
+    height: max-content;
+  }
+  .card_content {
+    padding: 0 5rem;
+  }
+  #citation {
+    padding: 3rem 0;
+  }
+  #citation .name {
+    font-size: 1.5em;
+  }
+  #citation .span {
+    font-size: 0.8em;
+  }
+  #citation .text {
+    margin: 2rem 5rem;
+  }
+  .bkg_right {
+    display: flex;
+  }
+  .bkg2 {
+    position: none;
+  }
+  .content_ {
+    display: flex;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer h4 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .tinker h2 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .tinker p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 795px) {
+  .menu_bar li a {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 750px) {
   .fa-bars {
     display: block;
     margin-right: 2rem;
   }
-  ul {
+  .menu_bar ul {
     display: none;
   }
   .menu_bar:hover ul {
     display: block;
-    position: relative;
+    position: absolute;
     top: 1.5rem;
     right: 0;
-    background-color: orange;
+    background-color: #f5c45d;
     color: white;
   }
-  ul li {
+  .menu_bar li {
     padding: 1rem;
+  }
+  .menu_bar li:hover {
+    text-shadow: 0px 5px 5px orange;
+  }
+  .banner_title {
+    margin: 0 5rem;
+  }
+  .banner_title p {
+    font-size: 0.8em;
+  }
+  #contact {
+    padding-bottom: 5rem;
+  }
+  #contact p {
+    padding: 0 5rem;
+  }
+  #contact .map {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  .banner_title {
+    margin: 0 2rem;
+  }
+  .card_content {
+    padding: 0 2rem;
+  }
+  #citation .text {
+    margin: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .banner_title {
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .banner_title {
+    margin: 0 0.5rem;
+  }
+  #contact p {
+    padding: 0 1rem;
+  }
+  .address {
+    justify-content: center;
   }
 }
 

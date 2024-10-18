@@ -2,6 +2,97 @@
 @use "../abstract/mixins" as m;
 
 
-@media screen and (max-width:1200px) {
-      
+@media screen and (max-width:1250px) {
+      .banner_title{
+            text-align: center;
+      }
+      .cards{
+            width: 100%;
+            justify-content: space-between;
+      }
+      .card_content{
+            padding: 0 1rem;
+            h3{
+                  text-align: center;
+            }
+      }
+      .post{
+            .buttoms a{
+                  font-size: 0.8em;
+                  text-align: center;
+            }
+      }
+      #contact{
+            p{
+            padding: 0 10rem;
+            }
+      }
+      .address{
+            flex-wrap: wrap;
+            flex-direction: column;
+            div{
+                  margin-bottom: 2rem;
+            }
+            
+}
+}
+@media screen and (max-width:960px) {
+      .menu_bar li a{
+            margin: 0 0.2rem;
+      }
+      .cards{
+            flex-wrap: wrap;
+            padding-bottom: 2rem;
+            }
+      #firstsection{
+            height: max-content;
+      }
+      .card_content{
+            padding: 0 5rem;
+      }
+      #citation{
+            padding: 3rem 0;
+            .name{
+                  font-size: 1.5em;
+            }
+            .span{
+                  font-size: 0.8em;
+            }
+            .text{
+                  margin: 2rem 5rem;
+            }
+      }
+      .bkg_right{
+            display: flex;
+            
+      }
+      .bkg2{
+            position: none;
+         
+      }
+      .content_{
+            display: flex;
+      }
+      footer{
+            flex-direction: column;
+            align-items: center;
+            h4{
+                  text-align: center;
+                  margin-top:2rem;
+            }
+      }
+      .tinker {
+            h2{ 
+                  text-align: center;
+                  margin-top:2rem;
+            }
+            p{
+                  text-align: center;
+            }
+}
+}
+@media screen and (max-width:795px) {
+      .menu_bar li a{
+            margin: 0;
+      }
 }

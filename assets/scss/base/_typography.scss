@@ -2,25 +2,25 @@
 @use "../abstract/mixins" as m;
 
 @font-face {
-      font-family: "roboto" ;
-      src: url(../../font/Roboto-Regular.ttf);
+      font-family:"roboto" ;
+      src: url(../font/Roboto-Regular.ttf);
 }
 @font-face {
-      font-family: "robotobold" ;
-      src: url(../../font/Roboto-Bold.ttf);
+      font-family:"robotobold" ;
+      src: url(../font/Roboto-Bold.ttf);
 }
 @font-face {
-      font-family: "poppins" ;
-      src: url(../../font/Poppins/Poppins-Black.ttf);
+      font-family:"poppins" ;
+      src: url(../font/Poppins/Poppins-Black.ttf);
 }
 @font-face {
-      font-family: "banner";
-      src: url(../../font/Poppins/Poppins-Regular.ttf);
+      font-family:"banner";
+      src: url(../font/Poppins/Poppins-Regular.ttf);
 }
 
 header{
-      font-family: "banner";
+      font-family:"banner";
 }
-main footer{
+main,footer{
       font-family:"roboto";
 }
