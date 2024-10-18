@@ -25,7 +25,7 @@ header {
   font-family: "banner";
 }
 
-main {
+main footer {
   font-family: "roboto";
 }
 
@@ -100,7 +100,7 @@ nav li a {
 .btnwhite {
   background-color: white;
   color: black;
-  font-size: "poppins";
+  font-family: "poppins";
   text-transform: uppercase;
   border: 1px solid black;
   border-radius: 20px;
@@ -187,7 +187,7 @@ nav li a {
 }
 
 .cardblue {
-  width: 40%;
+  width: 30%;
   height: 100%;
   background-color: #3dc1cd;
   color: #faffff;
@@ -218,12 +218,35 @@ nav li a {
 }
 
 .photos {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 50%;
+  display: grid;
+  width: 60%;
+  height: 30%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: " pict1  pict2" " pict3  pict4" " pict5  pict6";
 }
 .photos img {
-  width: 40%;
+  width: 100%;
+  object-fit: cover;
+  flex-wrap: wrap;
+}
+.photos .pict1 {
+  grid-area: pict1;
+}
+.photos .pict2 {
+  grid-area: pict2;
+}
+.photos .pict3 {
+  grid-area: pict3;
+}
+.photos .pict4 {
+  grid-area: pict4;
+}
+.photos .pict5 {
+  grid-area: pict5;
+}
+.photos .pict6 {
+  grid-area: pict6;
 }
 
 #citation {
@@ -298,7 +321,7 @@ nav li a {
   margin: 2rem 0;
   background-color: white;
   color: black;
-  font-size: "poppins";
+  font-family: "poppins";
   font-weight: bolder;
   padding: 10px;
   transition: all 0.1s linear;
@@ -409,7 +432,19 @@ footer h4 {
 .location .address {
   display: flex;
   flex-direction: row;
-  border-left: 2px solid white;
+}
+.location .address div:first-child {
+  padding-right: 1rem;
+}
+.location .address div:last-child {
+  padding-left: 1rem;
+}
+.location .address div:nth-child(2) {
+  border-left: 2px solid rgb(78, 77, 77);
+}
+
+.info span {
+  font-weight: bold;
 }
 
 .nav_foot {
@@ -430,7 +465,7 @@ footer h4 {
 .cercle .fa-facebook-f {
   position: absolute;
   top: 25%;
-  left: 35%;
+  left: 30%;
 }
 .cercle .fa-twitter {
   position: absolute;

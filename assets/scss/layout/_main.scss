@@ -1,14 +1,15 @@
 @use "../abstract/variable" as v;
 @use "../abstract/mixins" as m;
 
+// ***********************1ère SECTION****************
 #firstsection{
       background-image: url(../image/about-bg.jpg);
       background-size: cover;
       background-position: center;
       color: white;
       height: 80vh;
-
 }
+// ************les 4 cartes**************
 .cards{
       display: flex;
       justify-content: center;
@@ -29,6 +30,7 @@
             @include m.btnblue
             }
 }
+// ************les icones + cercles*************
 .icon{
       background-color: v.$first-color;
       width: 5rem;
@@ -64,10 +66,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
 }
 // partie de gauche - liens
 .cardblue{
-      width: 40%;
+      width: 30%;
       height: 100%;
       background-color: v.$snd-color;
       color: #faffff;
@@ -98,13 +101,40 @@
 }
 // partie de droite - photos
 .photos{
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 50% ;
-img{
-      width: 40%;
+      display: grid;
+      width: 60%;
+      height: 30%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+      " pict1  pict2"
+      " pict3  pict4"
+      " pict5  pict6";
+      img{
+            width: 100%;
+            object-fit: cover;
+            flex-wrap: wrap;
+      }
+      .pict1{
+            grid-area: pict1;
+           }
+      .pict2{
+            grid-area: pict2;
+      }
+      .pict3{
+            grid-area: pict3;
+           }
+      .pict4{
+            grid-area: pict4;
+      }
+      .pict5{
+            grid-area: pict5;
+           }
+      .pict6{
+            grid-area: pict6;
+      }
 }
-}
+
 // ****************CITATION***********************
 #citation{
       text-align: center;

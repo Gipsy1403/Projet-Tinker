@@ -15,7 +15,7 @@
 @mixin btnwhite{
     background-color: white;
     color: black;
-    font-size: "poppins";
+    font-family: "poppins";
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 20px;
@@ -29,7 +29,7 @@
 @mixin btnwhiteblog{
     background-color: white;
     color: black;
-    font-size: "poppins";
+    font-family: "poppins";
     font-weight: bolder;
     padding: 10px;
     transition: all 0.1s linear;
